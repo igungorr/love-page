@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senin İçin</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(160deg,#1f1c2c,#928dab);
+  color:white;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* FOTOĞRAF STICKER */
+.photo{
+  position:absolute;
+  width:90px;
+  height:110px;
+  background:white;
+  padding:6px 6px 18px 6px;
+  border-radius:6px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.45);
+  transform:rotate(var(--rot));
+}
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:4px;
+}
+
+/* BAŞLIK */
+.title{
+  position:fixed;
+  top:40%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  font-size:22px;
+}
+
+/* ALT METİN */
+.text{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:90%;
+  max-width:500px;
+  text-align:center;
+  font-size:12px;
+  line-height:1.5;
+  background:rgba(0,0,0,0.4);
+  padding:14px;
+  border-radius:12px;
+}
+
+/* MÜZİK BUTONU */
+button{
+  position:fixed;
+  top:10px;
+  right:10px;
+  padding:10px 14px;
+  border:none;
+  border-radius:8px;
+  background:white;
+  color:#333;
+  z-index:3;
+}
+
+/* GİZLİ PLAYER */
+#player{
+  position:fixed;
+  width:1px;
+  height:1px;
+  opacity:0;
+  pointer-events:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- FOTOĞRAFLAR -->
+<div class="photo" style="top:5%; left:5%; --rot:-8deg;">
+<img src="https://i.hizliresim.com/ql36bg5.jpeg">
+</div>
+
+<div class="photo" style="top:10%; right:5%; --rot:6deg;">
+<img src="https://i.hizliresim.com/5brmfcl.jpeg">
+</div>
+
+<div class="photo" style="top:25%; left:8%; --rot:10deg;">
+<img src="https://i.hizliresim.com/l91nna3.jpeg">
+</div>
+
+<div class="photo" style="bottom:25%; right:8%; --rot:-5deg;">
+<img src="https://i.hizliresim.com/4xleprr.jpeg">
+</div>
+
+<div class="photo" style="bottom:12%; left:8%; --rot:7deg;">
+<img src="https://i.hizliresim.com/dxa01b6.jpeg">
+</div>
+
+<div class="photo" style="bottom:10%; right:12%; --rot:-9deg;">
+<img src="https://i.hizliresim.com/l6r57uk.jpeg">
+</div>
+
+<div class="title">
+Seninle Geçen Zamanın Sessiz Güzelliği
+</div>
+
+<div class="text">
+Yol Arkadaşıma...(Bal gabrağıma)<br><br>
+Dönüp arkama baktığımda, sadece geçen takvim yapraklarını değil; ilmek ilmek işlediğimiz bir ömrü görüyorum. Seninle kurduğumuz bu bağ, sadece güzel günlerin neşesiyle değil, en çok da o "geçmeyecekmiş" gibi gelen zor günlerde birbirimize tutunmamızla güçlendi.<br><br>
+Şimdi önümüzde, el ele verip kurduğumuz o hayalleri birer birer yaşayacağımız, bugünden çok daha güzel ve aydınlık günler var. Seninle daha nice hayalleri gerçeğe dönüştüreceğimize, her yeni güne yine o büyük sevgimizle uyanacağımıza inancım sonsuz. İyi ki varsın, iyi ki biz olduk.
+</div>
+
+<button onclick="playMusic()">Müziği Başlat</button>
+
+<iframe id="player" allow="autoplay"></iframe>
+
+<script>
+function playMusic(){
+  document.getElementById("player").src =
+  "https://www.dailymotion.com/embed/video/x7udsv1?autoplay=1&mute=0";
+}
+</script>
+
+</body>
+</html>
